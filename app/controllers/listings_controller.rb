@@ -18,6 +18,7 @@ class ListingsController < ApplicationController
         #finish logic for creating a record
        @listing = Listing.create(listing_params)
         if @listing.errors.any? 
+            @breeds = Breed.all
             render "new"
         end
 
