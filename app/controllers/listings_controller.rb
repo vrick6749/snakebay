@@ -19,6 +19,7 @@ class ListingsController < ApplicationController
         #finish logic for creating a record
        @listing = Listing.create(listing_params)
         if @listing.errors.any? 
+            @sexes = Listing.sexes.keys
             @breeds = Breed.all
             render "new"
         else 
