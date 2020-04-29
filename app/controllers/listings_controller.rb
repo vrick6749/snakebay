@@ -10,6 +10,7 @@ class ListingsController < ApplicationController
     end
 
     def new
+        @sexes = Listing.sexes.keys
         @breeds = Breed.all
         @listing = Listing.new
     end
@@ -20,6 +21,8 @@ class ListingsController < ApplicationController
         if @listing.errors.any? 
             @breeds = Breed.all
             render "new"
+        else 
+            redirect_to listings_path
         end
 
 
