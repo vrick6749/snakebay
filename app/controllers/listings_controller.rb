@@ -22,10 +22,6 @@ class ListingsController < ApplicationController
 
 
         puts @listing.errors.full_messages
-        
-
-        # puts @listing.errors.any? <<< THIS return true the one above specifies what is missing in CONSOLE
-
 
     end
 
