@@ -15,11 +15,14 @@ class ListingsController < ApplicationController
 
     def create
         #finish logic for creating a record
-       @listing = Listing.create(listing_params) #in private, to allow files to be accepted as params as relying on rails to automatically match
-        if @listing.errors.any? #checks for errors and spits out /listings/new again
+       @listing = Listing.create(listing_params)
+        if @listing.errors.any? 
             render "new"
         end
+
+
         puts @listing.errors.full_messages
+        
 
         # puts @listing.errors.any? <<< THIS return true the one above specifies what is missing in CONSOLE
 

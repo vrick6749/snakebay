@@ -1,10 +1,5 @@
-<h1>New listing</h1>
+<h1> Hello</h1>
 
-<%if @listing.errors.any?%>
-    <% @listing.errors.full_messages.each do |message| %>
-        <li><%= message%></li>
-    <%end%>
-<%end%>
 
 <%= form_with model: @listing do |form| %>
         <div>
