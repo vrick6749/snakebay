@@ -1,6 +1,5 @@
-Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  Rails.application.routes.draw do
+ Rails.application.routes.draw do
+  devise_for :users
     get "/", to: "pages#home", as: "root"
 
     get "/listings", to: "listings#index", as: "listings"
@@ -14,4 +13,4 @@ Rails.application.routes.draw do
 
     # get "*path", to: "pages#not_found"
 end
-end
+
