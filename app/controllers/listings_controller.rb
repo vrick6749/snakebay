@@ -10,6 +10,7 @@ class ListingsController < ApplicationController
     end
 
     def new
+        @breeds = Breed.all
         @listing = Listing.new
     end
 

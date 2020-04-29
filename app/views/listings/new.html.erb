@@ -12,6 +12,15 @@
             <%= form.label :title%>
             <%= form.text_field :title%>
         </div>
+
+
+
+         <div>
+            <%= form.label :breed_id%>  
+            <%= form.select(:breed_id,)%>
+        </div>
+
+
         <div>
             <%= form.label :description%>
             <%= form.text_area :description%>
@@ -36,10 +45,7 @@
             <%= form.label :date_of_birth%>
             <%= form.date_field :date_of_birth%>
         </div>
-        <div>
-            <%= form.label :breed_id%>  
-            <%= form.number_field :breed_id%>
-        </div>
+
         <div>
             <%= form.label :diet%>
             <%= form.text_field :diet%>
